@@ -1,0 +1,14 @@
+Predictor,{Coef.\ ($\beta$)},{SE},{$z$},{$p$},{OR},{OR 2.5%},{OR 97.5%}
+(Intercept),0.694,0.346,2.004,.045,2.002,1.015,3.947
+AI provision by employer,0.606,0.286,2.121,.034,1.833,1.047,3.210
+Guidelines on AI use,-0.887,0.496,-1.787,.074,0.412,0.156,1.090
+AI-specific training,0.323,0.358,0.901,.367,1.381,0.685,2.785
+Male,0.102,0.256,0.398,.691,1.107,0.670,1.830
+Age (ordinal),-0.527,0.107,-4.917,{\textless} .001,0.590,0.478,0.728
+Hospital or medical care center setting,0.566,0.264,2.146,.032,1.761,1.050,2.954
+Model fit
+Observations ($N$)",320
+LLR $p$-value,{\textless} 0.001
+AIC,401.42
+BIC,427.80
+Pseudo $R^{2}$ (McFadden),0.127
