@@ -69,11 +69,6 @@ reasons. See Section 6, Data availability.
     |     figures/
     |        figure1_translation_model.pdf
     |        figure2.pdf
-    |
-    |-- ethics/
-          ethics_approval_references.txt
-          participant_information_sheet.pdf
-          privacy_notice.pdf
 
 --------------------------------------------------------------------------------
 3. CONTENT DESCRIPTION
@@ -152,10 +147,6 @@ reasons. See Section 6, Data availability.
     intervals, VIF diagnostics (all at or below 1.33) and Hosmer-Lemeshow tests.
     Specifications 17 and 19 correspond to Table 3 of the paper. Figure source
     files are provided.
-
-**ethics/**
-    Ethics approval references and the participant-facing documents preceding
-    the questionnaire.
 
 --------------------------------------------------------------------------------
 4. SOFTWARE ENVIRONMENT
