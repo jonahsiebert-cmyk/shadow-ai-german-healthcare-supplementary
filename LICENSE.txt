@@ -1,0 +1,17 @@
+Recommended licensing (to be confirmed by the authors):
+
+  code/                          MIT License (LICENSE.txt at repository root)
+  documentation/, data/aggregated/, instrument/, results/
+                                 Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Rationale: MIT is the least restrictive standard licence for the analysis scripts
+and is what the README placeholder already suggests. CC BY 4.0 for documents and
+aggregated tables requires attribution, which is the only condition the authors
+need, and is the licence most journals and repositories (Zenodo, OSF) expect for
+supplementary materials. The questionnaire is the authors' own work and can be
+released under the same CC BY 4.0 terms.
+
+Note that the HICSS proceedings paper itself is published under the HICSS/ScholarSpace
+terms (CC BY-NC-ND 4.0); that licence applies to the paper, not to this repository.
+
+Add the full MIT text as LICENSE.txt and state the split above in README Section 8.
