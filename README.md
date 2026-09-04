@@ -67,8 +67,8 @@ reasons. See Section 6, Data availability.
     |-- results/
     |     sensitivity_analysis_report.pdf  all regression specifications with diagnostics
     |     figures/
-    |        figure1_translation_model.pdf
-    |        figure2.pdf
+    |        figure_1.png                   translation model 
+    |        figure_2.png                   statistics
 
 --------------------------------------------------------------------------------
 3. CONTENT DESCRIPTION
