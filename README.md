@@ -63,7 +63,6 @@ reasons. See Section 6, Data availability.
     |     04_regression_main.py
     |     05_regression_sensitivity.py
     |     06_nonresponse_bias.py
-    |     figure2_regenerate.py
     |
     |-- results/
     |     sensitivity_analysis_report.pdf  all regression specifications with diagnostics
