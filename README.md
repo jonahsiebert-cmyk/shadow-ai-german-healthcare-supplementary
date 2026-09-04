@@ -3,14 +3,11 @@ Supplementary materials, analysis code, and reproduction package
 
 
 VERSION
-    1.0
-    Last updated: 16. Juni 2026
+    1.1
+    Last updated: 04. September 2026
 
 STATUS
-    This repository accompanies a manuscript under double-blind review. All
-    author names, institutional affiliations, and identifying contact details
-    have been removed. They are to be completed for the camera-ready version.
-
+    This repository accompanies the camera-ready version.
 
 --------------------------------------------------------------------------------
 1. OVERVIEW OF THE STUDY
@@ -55,7 +52,7 @@ See Section 6, Data availability.
     |        table3_regression_main.csv
     |        federal_state_distribution.csv
     |        application_areas.csv
-    |        reference_statistics_baek_2025.csv
+    |        
     |
     |-- code/
     |     requirements.txt                 pinned dependency versions
@@ -151,7 +148,8 @@ See Section 6, Data availability.
     Ethics approval references and the participant-facing documents preceding
     the questionnaire.
 
-
+**link to further references**
+[reference statistics BÄK 2025](https://www.bundesaerztekammer.de/fileadmin/user_upload/BAEK/Ueber_uns/Statistik/AErztestatistik_2025.pdf) last checked: 04 sept 26
 --------------------------------------------------------------------------------
 4. SOFTWARE ENVIRONMENT
 --------------------------------------------------------------------------------
@@ -199,13 +197,7 @@ See Section 6, Data availability.
 7. ETHICS
 --------------------------------------------------------------------------------
 
-    The study received favourable ethics opinions from two institutions
-    [ANONYMISED FOR REVIEW; references and dates in ethics/]. Data collection
-    complied with the General Data Protection Regulation. A privacy notice and
-    participant information sheet preceded the questionnaire, and participation
-    was conditional on informed consent. Participation was voluntary and
-    anonymous, and no incentives were offered.
-
+    The study received favourable ethics opinions from the University of Cambridge (Ref. 736, 15 May 2025) and Offenburg University of Applied Sciences (Ref. 04-25, 27       June 2025). Data collection was conducted in compliance with the General Data Protection Regulation (GDPR). A privacy notice and participant information sheet            preceded the questionnaire; participation was conditional on informed consent.
 
 --------------------------------------------------------------------------------
 8. LICENCE
@@ -227,5 +219,5 @@ See Section 6, Data availability.
 10. CONTACT
 --------------------------------------------------------------------------------
 
-    [ANONYMISED FOR REVIEW]
+    Corresponding Authors: Sophie Perret (scp64@cam.ac.uk) and Jonah Siebert (jonah.siebert@hs-offenburg.de)
 ================================================================================
