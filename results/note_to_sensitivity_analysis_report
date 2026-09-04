@@ -1,3 +1,4 @@
 ** Note to the Sensitivity Analysis**
-18 and 20 duplicate 17 and 19 because the "no_others_in_type_of_provider" flag is inert once the fifteen "Sonstige" records are excluded.
+18 and 20 duplicate 17 and 19 because the "no_others_in_type_of_provider" flag is inert once the fifteen "Sonstige" records are excluded. 
 This is depending on the sample size you start with n=335 or n=320. 
+Table 3 of the paper corresponds to Specifications 19 (own use) and 17 (exposure)
