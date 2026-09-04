@@ -53,10 +53,25 @@ aggregated/
   German umlauts (ä, ö, ü, ß), and mathematical symbols (e.g., Delta, >=) are 
   fully preserved and machine-readable.
 
---------------------------------------------------------------------------------
-4. LICENSING & CITATION
---------------------------------------------------------------------------------
-This dataset is made available under the open data license [e.g., CC BY 4.0 / CC0]. 
-If you use this dataset in your research, please cite it as follows:
 
+--------------------------------------------------------------------------------
+4. MICRODATA ACCESS CONDITIONS
+--------------------------------------------------------------------------------
+The individual level survey responses are not deposited in this
+repository. They are personal data collected under participant consent
+which provides for publication in aggregated form only.
+
+Requests for access may be addressed to the principal investigator,
+Prof. Dr.-Ing. Markus Schinle, Offenburg University of Applied Sciences
+(markus.schinle@hs-offenburg.de), for the data controller, Hochschule
+Offenburg. A request should state the applicant's affiliation, the
+research question and the intended analysis. Each request is decided
+individually and within the limits of the consent obtained. Access is
+confined to non-commercial scientific use and requires a written
+undertaking not to attempt re-identification and not to transfer the data
+to third parties.
+
+Ethics approval: Offenburg University of Applied Sciences, application
+04-25, 27 June 2025; Department of Engineering, University of Cambridge,
+application 736, 15 May 2025.
 ================================================================================
