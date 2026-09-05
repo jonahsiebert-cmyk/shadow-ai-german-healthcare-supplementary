@@ -9,7 +9,7 @@ VERSION
 STATUS
     This repository accompanies the resubmitted version of the paper
     (Proceedings of the 60th Hawaii International Conference on System
-    Sciences, HICSS 2027). See CITATION.cff.
+    Sciences, HICSS 2027).
     
 --------------------------------------------------------------------------------
 1. OVERVIEW OF THE STUDY
