@@ -2,14 +2,16 @@
 DATA README: REPOSITORY APPENDIX
 ================================================================================
 
-Last Updated: 2026-06-24
+Last Updated: 2026-09-05
 
 --------------------------------------------------------------------------------
 1. GENERAL INFORMATION
 --------------------------------------------------------------------------------
-This directory contains the aggregated datasets and reference statistics utilized
-for the tables and analyses presented in the main manuscript. All data files 
-are provided in CSV format (UTF-8 encoded, comma-delimited).
+This directory contains the aggregated datasets utilized for the tables and
+analyses presented in the main manuscript. All data files are provided in CSV
+format (UTF-8 encoded, comma-delimited). The cleaned survey export
+dataClassified_2.csv, which the scripts in code/ read, is not deposited
+(Section 4); it is cp1252 encoded and semicolon-delimited.
 
 --------------------------------------------------------------------------------
 2. DIRECTORY AND FILE STRUCTURE
@@ -22,12 +24,15 @@ aggregated/
 │       against the reference data from the German Medical Association (BÄK).
 │
 ├── table2_governance_index_by_setting.csv
-│   └── Calculated governance indices, broken down by work context 
-│       (Hospital, Private Practice, Medical Care Center/MVZ).
+│   └── Governance index distribution (0 to 3) and the three component
+│       measures by work context (Hospital, Practice, Medical Care Centre/MVZ)
+│       and overall; written by code/03_governance_index.py.
 │
 ├── table3_regression_main.csv
-│   └── Coefficients, standard errors, and significance levels of the 
-│       primary regression model.
+│   └── Coefficients, standard errors, z values, p values, odds ratios with
+│       95% confidence intervals and fit statistics of both models in Table 3
+│       (own use, primary; exposure, secondary); written by
+│       code/04_regression_main.py.
 │
 ├── federal_state_distribution.csv
 │   └── Distribution of respondents across individual federal states, including 
@@ -36,10 +41,10 @@ aggregated/
 ├── application_areas.csv
 │   └── Overview and descriptive statistics regarding the specified fields 
 │       of application.
-│
-└── reference_statistics_baek_2025.csv
-    └── External reference statistics from the German Medical Association (2025), 
-        used for data weighting and representativeness assessments.
+
+Reference statistics of the German Medical Association (2025) used for the
+goodness-of-fit tests and the age standardisation are stated in
+code/02_sample_descriptives.py and in federal_state_distribution.csv.
 
 --------------------------------------------------------------------------------
 3. DATA USAGE & ANONYMIZATION NOTES
