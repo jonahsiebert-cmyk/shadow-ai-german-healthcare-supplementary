@@ -3,14 +3,14 @@ Supplementary materials, analysis code, and reproduction package
 
 
 VERSION
-    1.1
-    Last updated: 4 September 2026
+    1.2
+    Last updated: 05 September 2026
 
 STATUS
     This repository accompanies the camera-ready version of the paper
     (Proceedings of the 60th Hawaii International Conference on System
     Sciences, HICSS 2027). See CITATION.cff.
-
+    
 --------------------------------------------------------------------------------
 1. OVERVIEW OF THE STUDY
 --------------------------------------------------------------------------------
@@ -29,7 +29,7 @@ reasons. See Section 6, Data availability.
 2. REPOSITORY STRUCTURE
 --------------------------------------------------------------------------------
 
-    shadow-ai-german-healthcare-supplementary/
+     shadow-ai-german-healthcare-supplementary/
     |
     |-- README.md                          this file
     |-- LICENSE.txt                        licence for code and materials
@@ -42,12 +42,12 @@ reasons. See Section 6, Data availability.
     |-- documentation/
     |     strobe_flow_diagram.pdf          sample derivation, 403 to 320
     |     cleaning_and_aggregation_rules.pdf
-    |     codebook.csv                     variable names, coding, value labels, key to the sensitivity report
+    |     codebook.csv                     variable names, coding, value labels
     |     governance_index_construction.pdf
     |     nonresponse_bias_analysis.pdf    early versus late respondents
     |
     |-- data/
-    |     README_data.txt                  microdata access conditions
+    |     README_data.txt                  file descriptions and microdata access conditions
     |     aggregated/
     |        table1_sample_characteristics.csv
     |        table2_governance_index_by_setting.csv
@@ -63,13 +63,12 @@ reasons. See Section 6, Data availability.
     |     04_regression_main.py
     |     05_regression_sensitivity.py
     |     06_nonresponse_bias.py
+    |     07_sensitivity_report.py
     |
     |-- results/
-    |     sensitivity_analysis_report.pdf  all regression specifications with diagnostics
-    |     note_to_sensitivity_analysis_report.md
-    |     figures/
-    |        figure_1.png                   statistics
-    |        figure_2.png                   translation model 
+    |     sensitivity_analysis_report.pdf  all regression specifications
+    |     figure_1.png                     Shadow AI item and governance measures by setting
+    |     figure_2.png                     organisational translation of macro-level regulation
 
 --------------------------------------------------------------------------------
 3. CONTENT DESCRIPTION
@@ -98,17 +97,18 @@ reasons. See Section 6, Data availability.
     practices combined into "Practice").
 
 **documentation/codebook.csv**
-    Variable definitions and coding for every item used in the analysis,
-    including: the ordinal coding of the six age bands; the reference category
-    for healthcare setting (ambulatory practice); the two dependent variables
-    (own unauthorised AI use, the primary outcome: 1 = own use, 0 = otherwise;
-    Shadow AI exposure, the secondary outcome: 1 = own use or observation of a
-    colleague, 0 = no case known); and the governance-index coding rule, under
-    which responses of "do not know" or "cannot say" on a component item are
-    coded as the measure not being in place. The codebook also maps the German
-    variable labels used in the sensitivity report to the English labels used
-    in the paper, and states that the flag "AI Users Only" in that report
-    denotes the own use dependent variable, not a restricted sample.
+    Variable definitions and coding for every item used in the analysis, with
+    the column position of each item in the export, the German response
+    options and their English labels, and frequencies on the analytical
+    sample. It records the ordinal coding of the six age bands (20 to 29 years
+    coded 0); the reference category for healthcare setting (ambulatory
+    practice); the two dependent variables (own unauthorised AI use, the
+    primary outcome: 1 = own use, 0 = otherwise; Shadow AI exposure, the
+    secondary outcome: 1 = own use or observation of a colleague, 0 = no case
+    known); and the governance-index coding rule, under which responses of
+    "do not know" or "cannot say" on a component item are coded as the
+    measure not being in place. The variable names in the codebook are the
+    names used in the scripts.
 
 **documentation/governance_index_construction.pdf**
     Construction of the composite governance index (0 to 3), its adaptation from
@@ -123,31 +123,64 @@ reasons. See Section 6, Data availability.
     Shadow AI item, with chi-square tests of independence and Cramér's V.
 
 **data/aggregated/**
-    The aggregated tables required to regenerate the published descriptives,
-    governance distributions and regression tables. These files allow the
-    published numbers to be reproduced without access to the microdata. The
-    reference statistics of the German Medical Association used for the
-    goodness-of-fit tests and the age standardisation are published at
+    The aggregated tables documenting the published descriptives, governance
+    distributions and regression results. table2_governance_index_by_setting.csv
+    and table3_regression_main.csv are written by scripts 03 and 04;
+    table3_regression_main.csv contains both models of Table 3. The reference
+    statistics of the German Medical Association used for the goodness-of-fit
+    tests and the age standardisation are published at
     https://www.bundesaerztekammer.de/fileadmin/user_upload/BAEK/Ueber_uns/Statistik/AErztestatistik_2025.pdf
-    (last checked 4 September 2026).
+    (last checked 4 September 2026); the shares used are stated in
+    02_sample_descriptives.py and in federal_state_distribution.csv.
 
 **code/**
-    Python scripts reproducing each analysis stage from a prepared dataset.
-    Run order follows the file numbering. 04_regression_main.py estimates the
-    exposure model (Table 3, right-hand columns; Specification 17 of the
-    sensitivity report). 05_regression_sensitivity.py estimates the own use
-    model, which is the primary specification in the paper (Table 3, left-hand
-    columns; Specification 19), together with the further specifications in the
-    sensitivity report. 06_nonresponse_bias.py reproduces
-    documentation/nonresponse_bias_analysis.pdf. figure2_regenerate.py
-    reproduces Figure 2 from the counts by setting.
+    Python scripts reproducing each analysis stage from the cleaned export
+    dataClassified_2.csv (n = 335, semicolon separated, cp1252). Run order
+    follows the file numbering; each script asserts its output against the
+    figures printed in the manuscript and stops if they differ.
+
+    01_data_cleaning.py         Builds the analytical sample (n = 320) and
+                                derives every variable used in the manuscript
+                                under the names in documentation/codebook.csv.
+                                Writes analytical_sample.csv.
+    02_sample_descriptives.py   Table 1; goodness-of-fit tests of Section 4.1
+                                (gender, age, federal state); AI use,
+                                application areas, Shadow AI item, by-setting
+                                rates shown in Figure 1 and the age-standardised
+                                rates of Section 4.2; governance components and
+                                training mode of Section 4.3.
+    03_governance_index.py      Composite governance index (0 to 3) and Table 2
+                                including the three component columns. Writes
+                                table2_governance_index_by_setting.csv.
+    04_regression_main.py       Table 3, both models: own use (primary,
+                                Specification S14 of the sensitivity report)
+                                and exposure (secondary, S13), with variance
+                                inflation factors. Writes
+                                table3_regression_main.csv.
+    05_regression_sensitivity.py
+                                The sixteen specifications of the sensitivity
+                                report (age ordinal or categorical, setting
+                                bundled or separate, governance as components
+                                or index, both outcomes) and two additional
+                                specifications in which "do not know" on tool
+                                provision and guidelines is treated as missing.
+                                Writes sensitivity_specifications.csv.
+    06_nonresponse_bias.py      Early versus late respondent comparison,
+                                reproducing documentation/nonresponse_bias_analysis.pdf.
+    07_sensitivity_report.py    Builds results/sensitivity_analysis_report.pdf
+                                from the outputs of scripts 04 and 05.
+
+    Age enters the models as a single ordinal predictor with the youngest band
+    coded 0, as recorded in the codebook; the odds ratio refers to a one
+    category increase.
 
 **results/**
-    The sensitivity analysis report with all regression specifications,
-    coefficients, standard errors, z-values, p-values, odds ratios, confidence
-    intervals, VIF diagnostics (all at or below 1.33) and Hosmer-Lemeshow tests.
-    Specifications 17 and 19 correspond to Table 3 of the paper. Figure source
-    files are provided.
+    The sensitivity analysis report: coding conventions, an overview of all
+    eighteen specifications with fit statistics, full coefficient tables
+    (coefficients, standard errors, z values, p values, odds ratios and 95 per
+    cent confidence intervals), and variance inflation factors for the Table 3
+    predictor set (maximum 1.32). Specifications S14 and S13 correspond to
+    Table 3 of the paper. The two figures of the paper are provided as PNG.
 
 --------------------------------------------------------------------------------
 4. SOFTWARE ENVIRONMENT
@@ -167,15 +200,22 @@ reasons. See Section 6, Data availability.
 --------------------------------------------------------------------------------
 5. REPRODUCING THE ANALYSIS
 --------------------------------------------------------------------------------
+ 
+    With dataClassified_2.csv placed in the repository root, scripts 01 to
+    07 reproduce every table and statistic in the manuscript and the
+    sensitivity report when run in order from the repository root:
 
-    Published figures and tables can be regenerated from the aggregated files in
-    data/aggregated/ using the scripts in code/.
+        python code/01_data_cleaning.py
+        python code/02_sample_descriptives.py
+        ...
+        python code/07_sensitivity_report.py
 
-    Full re-estimation of the regression models and of the non-response
-    comparison requires the individual-level microdata, which are not included
-    in this repository (see Section 6). With the microdata placed in data/
-    under the variable names given in the codebook, scripts 01 through 06
-    reproduce the reported results when run in order.
+    Intermediate files (analytical_sample.csv, sensitivity_specifications.csv)
+    are written to the repository root and are not deposited.
+
+    The file is not deposited (see Section 6). Without it, the aggregated
+    tables in data/aggregated/ document the published values but the scripts
+    cannot be executed.
 
 --------------------------------------------------------------------------------
 6. DATA AVAILABILITY
