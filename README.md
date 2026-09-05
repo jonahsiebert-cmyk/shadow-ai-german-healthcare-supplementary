@@ -4,10 +4,10 @@ Supplementary materials, analysis code, and reproduction package
 
 VERSION
     1.2
-    Last updated: 05 September 2026
+    Last updated: 05 September 2026 (before 04 September 2026 11:59pm HST)
 
 STATUS
-    This repository accompanies the camera-ready version of the paper
+    This repository accompanies the resubmitted version of the paper
     (Proceedings of the 60th Hawaii International Conference on System
     Sciences, HICSS 2027). See CITATION.cff.
     
@@ -253,17 +253,12 @@ reasons. See Section 6, Data availability.
 --------------------------------------------------------------------------------
 
     See CITATION.cff. Paper:
-
-    Perret, S., Siebert, J., Baumann, J., & Schinle, M. (2027). Dense
-    Regulation, Sparse Governance: Shadow AI Among Physicians in the German
-    Healthcare System. In Proceedings of the 60th Hawaii International
-    Conference on System Sciences (HICSS). [pages and DOI to be added]
+    will be updated
 
 --------------------------------------------------------------------------------
 10. CONTACT
 --------------------------------------------------------------------------------
 
-    Corresponding authors: Sophie Perret (scp64@cam.ac.uk) and
-    Jonah Siebert (jonah.siebert@hs-offenburg.de)
+    Corresponding authors: will be updated
 ================================================================================
 
