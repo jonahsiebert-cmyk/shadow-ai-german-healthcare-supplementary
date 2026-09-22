@@ -1,13 +1,18 @@
 # Dense Regulation, Sparse Governance: Shadow AI Among Physicians in the German Healthcare System
 Supplementary materials, analysis code, and reproduction package
 
+AUTHORS
+    Sophie-Charlotte Perret, University of Cambridge (0009-0009-0044-4633)
+    Jonah Siebert, University of Applied Sciences Offenburg (0009-0001-7136-1175)
+    Jan Baumann, Hartmannbund, Association of Doctors in Germany (0000-0003-3679-7341)
+    Markus Schinle, University of Applied Sciences Offenburg (0000-0002-3132-0280)
 
 VERSION
-    1.2
-    Last updated: 05 September 2026 (before 04 September 2026 11:59pm HST)
+    1.3
+    Last updated: 22 September 2026 (before 22 September 2026 11:59pm HST)
 
 STATUS
-    This repository accompanies the resubmitted version of the paper
+    This repository accompanies the final version of the paper
     (Proceedings of the 60th Hawaii International Conference on System
     Sciences, HICSS 2027).
     
@@ -253,12 +258,21 @@ reasons. See Section 6, Data availability.
 --------------------------------------------------------------------------------
 
     See CITATION.cff. Paper:
-    will be updated
-
+    Perret, S., Siebert, J., Baumann, J., & Schinle, M. (2027). Dense
+    regulation, sparse governance: Shadow AI among physicians in the
+    German healthcare system. In Proceedings of the 60th Hawaii
+    International Conference on System Sciences (HICSS 2027). University
+    of Hawaiʻi at Mānoa, ScholarSpace.
 --------------------------------------------------------------------------------
 10. CONTACT
 --------------------------------------------------------------------------------
 
-    Corresponding authors: will be updated
+    Corresponding Authors: 
+    Sophie Perret, University of Cambridge, scp64@cam.ac.uk
+    Jonah Siebert, University of Applied Sciences Offenburg, jonah.siebert@hs-offenburg.de
+
+    Co-Authors: 
+    Jan Baumann, Hartmannbund, jan.baumann@purposehealth.de
+    Markus Schinle, University of Applied Sciences Offenburg, markus.schinle@hs-offenburg.de
 ================================================================================
 
