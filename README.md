@@ -5,7 +5,7 @@ AUTHORS\
     Sophie-Charlotte Perret, University of Cambridge (0009-0009-0044-4633)\
     Jonah Siebert, University of Applied Sciences Offenburg (0009-0001-7136-1175)\
     Jan Baumann, Hartmannbund, Association of Doctors in Germany (0000-0003-3679-7341)\
-    Markus Schinle, University of Applied Sciences Offenburg (0000-0002-3132-0280)\
+    Markus Schinle, University of Applied Sciences Offenburg (0000-0002-3132-0280)
 
 VERSION\
     1.3\
