@@ -257,7 +257,7 @@ reasons. See Section 6, Data availability.
 9. CITATION
 --------------------------------------------------------------------------------
 
-    See CITATION.cff. Paper:\
+    See CITATION.cff. Paper:
     Perret, S., Siebert, J., Baumann, J., & Schinle, M. (2027). Dense
     regulation, sparse governance: Shadow AI among physicians in the
     German healthcare system. In Proceedings of the 60th Hawaii
