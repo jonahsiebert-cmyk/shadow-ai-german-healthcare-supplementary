@@ -267,12 +267,12 @@ reasons. See Section 6, Data availability.
 10. CONTACT
 --------------------------------------------------------------------------------
 
-    Corresponding Authors:\
-    Sophie Perret, University of Cambridge, scp64@cam.ac.uk \
-    Jonah Siebert, University of Applied Sciences Offenburg, jonah.siebert@hs-offenburg.de \
+    Corresponding Authors:
+    Sophie Perret, University of Cambridge, scp64@cam.ac.uk 
+    Jonah Siebert, University of Applied Sciences Offenburg, jonah.siebert@hs-offenburg.de 
 
     Co-Authors: 
-    ``Jan Baumann, Hartmannbund, jan.baumann@purposehealth.de \
-    ``Markus Schinle, University of Applied Sciences Offenburg, markus.schinle@hs-offenburg.de \
+    Jan Baumann, Hartmannbund, jan.baumann@purposehealth.de 
+    Markus Schinle, University of Applied Sciences Offenburg, markus.schinle@hs-offenburg.de 
 ================================================================================
 
