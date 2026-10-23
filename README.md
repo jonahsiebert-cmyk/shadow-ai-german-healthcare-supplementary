@@ -9,7 +9,7 @@ AUTHORS\
 
 VERSION\
     1.3\
-    Last updated: 22 September 2026 (before 22 September 2026 11:59pm HST)
+    Last updated: 22 September 2026
 
 STATUS\
     This repository accompanies the final version of the paper
